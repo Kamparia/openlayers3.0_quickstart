@@ -100,8 +100,17 @@ function init(){
 		}
 	});	
 
-	console.log(map.getView().getCenter());
 
-	//map.addControl(new ol.control.OverviewMap());
+	// Geocoder
+	var geocoder = new Geocoder('nominatim', {
+		provider: 'photon',
+		lang: 'en',
+		placeholder: 'Search for ...',
+		limit: 5,
+		debug: true,
+		autoComplete: true,
+		keepOpen: true
+	});
+	map.addControl(geocoder);
 
 }

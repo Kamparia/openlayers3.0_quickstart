@@ -12,6 +12,13 @@ body {
   outline: #4A74A8 solid 0.15em;
 }
 
+.ol-control button{ 
+    background-color: rgba(40, 40, 40, 0.8) !important;
+}
+.ol-control button:hover{ 
+    background-color: rgba(40, 40, 40, 1) !important;
+}
+
 .ol-overviewmap {
   margin-bottom: 25px;
 }
