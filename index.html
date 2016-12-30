@@ -10,22 +10,18 @@
   <body>
 
     <div id="map" class="map" tabindex="0"></div>
- 
-    <select id="layer-select" class="ol-control">
-      <option value="osm">OpenStreetMap</option>
-      <option value="road">ESRI StreetMap</option>
-      <option value="imagery">ESRI Imagery</option>
-      <option value="relief">ESRI Topo</option>
-    </select>
-
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
     <script src="https://openlayers.org/en/v3.20.1/build/ol.js"></script>    
     <script src="./js/init.js"></script>
 
-    
-    <link href="https://unpkg.com/ol3-geocoder/build/ol3-geocoder.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/ol3-geocoder/build/ol3-geocoder.js"></script>    
+    <!-- GeoCoder Plugin -->
+    <link href="./plugins/geocoder/ol3-geocoder.min.css" rel="stylesheet">
+    <script src="./plugins/geocoder/ol3-geocoder.js"></script>    
+
+    <!-- Layer Switcher Plugin -->
+    <link href="./plugins/layerswitcher/ol3-layerswitcher.css" rel="stylesheet">
+    <script src="./plugins/layerswitcher/ol3-layerswitcher.js"></script>        
   </body>
 </html>

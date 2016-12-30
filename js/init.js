@@ -3,8 +3,10 @@ window.onload = init;
 function init(){
 
 	var overlays = new ol.layer.Group({
+		title: 'Overlays',
 		layers: [
 			new ol.layer.Image({
+				title: 'US State Highway',
 				source: new ol.source.ImageArcGISRest({
 					ratio: 1,
 					params: {},
@@ -16,8 +18,35 @@ function init(){
 	});
 
 	var baselayers = new ol.layer.Group({
+		title: 'Baselayers',
 		layers: [
 			new ol.layer.Tile({
+				title: 'ESRI Topo Map',
+				type: 'base',				
+				source: new ol.source.XYZ({
+					url: 'http://server.arcgisonline.com/ArcGIS/rest/services/' +
+				    	'World_Topo_Map/MapServer/tile/{z}/{y}/{x}'
+				})
+			}),
+			new ol.layer.Tile({
+				title: 'ESRI Satellite Map',
+				type: 'base',				
+				source: new ol.source.XYZ({
+					url: 'http://server.arcgisonline.com/ArcGIS/rest/services/' +
+				    	'World_Imagery/MapServer/tile/{z}/{y}/{x}'
+				})
+			}),			
+			new ol.layer.Tile({
+				title: 'ESRI Street Map',
+				type: 'base',
+				source: new ol.source.XYZ({
+					url: 'http://server.arcgisonline.com/ArcGIS/rest/services/' +
+				    	'World_Street_Map/MapServer/tile/{z}/{y}/{x}'
+				})
+			}),
+			new ol.layer.Tile({
+				title: 'Open Street Map',
+				type: 'base',
 				source: new ol.source.OSM()
 			})
 		]
@@ -49,57 +78,11 @@ function init(){
 		})
 	});
 
-	function removeLayers(){
-		for (var i = map.getLayers().getLength() - 1; i >= 0; i--) { 
-		    map.removeLayer(layers[i]); 
-		}     		
-	}
-
-	// Basemap Toggle Layer
-	$("#layer-select").change(function() {
-		var option = $("#layer-select option:selected").val();
-		if (option == 'osm') {
-
-			var osm = new ol.layer.Tile({
-				source: new ol.source.XYZ({
-					url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-				})
-			});
-
-			baselayers.getLayers().setAt(1, osm);
-		}else if (option == 'road') {
-
-			var esri_road = new ol.layer.Tile({
-				source: new ol.source.XYZ({
-					url: 'http://server.arcgisonline.com/ArcGIS/rest/services/' +
-				    	'World_Street_Map/MapServer/tile/{z}/{y}/{x}'
-				})
-			});
-
-			baselayers.getLayers().setAt(1, esri_road);
-		}else if (option == 'imagery') {
-			var esri_imagery = new ol.layer.Tile({
-				source: new ol.source.XYZ({
-					url: 'http://server.arcgisonline.com/ArcGIS/rest/services/' +
-				    	'World_Imagery/MapServer/tile/{z}/{y}/{x}'
-				})
-			});
-
-			baselayers.getLayers().setAt(1, esri_imagery);
-		}else if (option == 'relief') {
-			var esri_relief = new ol.layer.Tile({
-				source: new ol.source.XYZ({
-					url: 'http://server.arcgisonline.com/ArcGIS/rest/services/' +
-				    	'World_Topo_Map/MapServer/tile/{z}/{y}/{x}'
-				})
-			});
-
-			baselayers.getLayers().setAt(1, esri_relief);
-		}else{
-
-		}
-	});	
-
+	// LayerSwitcher
+    var layerSwitcher = new ol.control.LayerSwitcher({
+        tipLabel: 'Layer Control' // Optional label for button
+    });
+    map.addControl(layerSwitcher);
 
 	// Geocoder
 	var geocoder = new Geocoder('nominatim', {

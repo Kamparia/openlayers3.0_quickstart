@@ -13,7 +13,10 @@ body {
 }
 
 .ol-control button{ 
+    width: 1.5625em;
+    height: 1.5625em;
     background-color: rgba(40, 40, 40, 0.8) !important;
+
 }
 .ol-control button:hover{ 
     background-color: rgba(40, 40, 40, 1) !important;
