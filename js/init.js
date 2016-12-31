@@ -67,15 +67,18 @@ function init(){
   		new ol.control.Rotate()
   	];
 
+	var view = new ol.View({
+		center: [-10997148, 4569099],
+		zoom: 4,
+		minZoom: 4,
+		maxZoom: 20
+	});
+
 	var map = new ol.Map({
 		layers: layers,
 		controls: controls,
 		target: 'map',
-		view: new ol.View({
-			center: [-10997148, 4569099],
-			zoom: 4,
-			minZoom: 4
-		})
+		view: view
 	});
 
 	// LayerSwitcher
@@ -95,5 +98,42 @@ function init(){
 		keepOpen: true
 	});
 	map.addControl(geocoder);
+
+
+	// Context Menu
+	var elastic = function (t) {
+		return Math.pow(2, -10 * t)*Math.sin((t - 0.075)*(2 * Math.PI)/0.3) + 1;
+	};
+	var center = function(obj, foo){
+		var pan = ol.animation.pan({
+			duration: 1000,
+			easing: elastic,
+			source: view.getCenter()
+		});
+		map.beforeRender(pan);
+		view.setCenter(obj.coordinate);
+	};
+
+	var contextmenu = new ContextMenu({
+		width: 170,
+		defaultItems: true, // defaultItems are (for now) Zoom In/Zoom Out
+		items: [
+			{
+				text: 'Center map here',
+				classname: '', // add some CSS rules
+				icon: '../plugins/contextmenu/img/center.png',
+				callback: center // `center` is your callback function
+
+			},
+			{
+				text: 'Add a Marker',
+				classname: '',
+				icon: '../plugins/contextmenu/img/pin_drop.png',  // this can be relative or absolute
+				callback: ''
+			},
+			'-'
+		]
+	});
+	map.addControl(contextmenu);
 
 }
