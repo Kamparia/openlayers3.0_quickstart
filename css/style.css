@@ -38,3 +38,7 @@ hr {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.layer-switcher .panel {
+  line-height: 2;
+}
