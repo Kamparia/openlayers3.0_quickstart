@@ -99,19 +99,19 @@ function init(){
 	});
 	map.addControl(geocoder);
 
-
 	// Context Menu
-	var elastic = function (t) {
-		return Math.pow(2, -10 * t)*Math.sin((t - 0.075)*(2 * Math.PI)/0.3) + 1;
+	var zoom_extent = function(){
+
 	};
-	var center = function(obj, foo){
-		var pan = ol.animation.pan({
-			duration: 1000,
-			easing: elastic,
-			source: view.getCenter()
-		});
-		map.beforeRender(pan);
-		view.setCenter(obj.coordinate);
+
+	var download_png = function(){
+        map.once('postcompose', function(event) {
+          var canvas = event.context.canvas;
+          canvas.toBlob(function(blob) {
+            saveAs(blob, 'map.png');
+          });
+        });
+        map.renderSync();		
 	};
 
 	var contextmenu = new ContextMenu({
@@ -119,18 +119,29 @@ function init(){
 		defaultItems: true, // defaultItems are (for now) Zoom In/Zoom Out
 		items: [
 			{
-				text: 'Center map here',
-				classname: '', // add some CSS rules
-				icon: '../plugins/contextmenu/img/center.png',
-				callback: center // `center` is your callback function
+				text: 'Zoom Extent',
+				icon: './plugins/contextmenu/img/center.png',
+				callback: zoom_extent
 
 			},
 			{
-				text: 'Add a Marker',
-				classname: '',
-				icon: '../plugins/contextmenu/img/pin_drop.png',  // this can be relative or absolute
+				text: 'Measure Distance',
+				icon: './plugins/contextmenu/img/center.png',
 				callback: ''
+
 			},
+			{
+				text: 'Measure Area',
+				icon: './plugins/contextmenu/img/center.png',
+				callback: zoom_extent
+
+			},
+			{
+				text: 'Save Map as PNG',
+				icon: './plugins/contextmenu/img/center.png',
+				callback: download_png
+
+			},			
 			'-'
 		]
 	});

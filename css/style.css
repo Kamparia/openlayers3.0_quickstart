@@ -32,3 +32,9 @@ body {
   /*background: #6a90b6;
   color: white;  */
 }
+
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
