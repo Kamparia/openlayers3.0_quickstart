@@ -13,10 +13,6 @@ A simple template for building responsive WebGIS applications usinf Openlayers 3
 
 [Click here](https://kamparia.github.io/openlayers3.0_quickstart/) to see a demo.
 
-## Contributing
-
-Please feel free to fork this package and contribute by submitting a pull request to enhance the functionalities.
-
 ## Tributes
 
 * [Jonatas Walker](https://github.com/jonataswalker) - For developing a [geocode extension](https://github.com/jonataswalker/ol3-geocoder) and a [custom menu control](https://github.com/jonataswalker/ol3-contextmenu) for Openlayers.
@@ -31,6 +27,10 @@ Don't forget to [follow me on twitter](https://twitter.com/kamparia)!
 
 Thanks!
 [Olaoye Somide.](http://somideolaoye.com)
+
+## Contributing
+
+Please feel free to fork this package and contribute by submitting a pull request to enhance the functionalities.
 
 ## License
 
