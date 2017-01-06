@@ -5,7 +5,7 @@ body {
 #map {
   position: absolute;
   width: 100%;
-  height: auto;
+  height: 93%;
   top: 60px;
 }
 
@@ -42,4 +42,9 @@ hr {
 
 .layer-switcher .panel {
   line-height: 2;
+}
+
+.ol-geocoder ul.gcd-gl-result>li {
+  padding: 5px;
+  line-height: 1.2rem;
 }
