@@ -2,9 +2,6 @@
 
 > #### A simple template for building responsive WebGIS applications usinf Openlayers 3.0 + Bootstrap
 
-## Introduction
-Here is a demonstration of how powerful R can be in carrying out in working with spatial data and geospatial analysis.
-
 <img width="1093" alt="screen shot 2016-07-02 at 2 12 14 pm" src="https://raw.githubusercontent.com/Kamparia/openlayers3.0_quickstart/master/img/screenshot.png">
 
 ## Tools
@@ -19,6 +16,11 @@ Here is a demonstration of how powerful R can be in carrying out in working with
 ## Contributing
 
 Please feel free to fork this package and contribute by submitting a pull request to enhance the functionalities.
+
+## Tributes
+
+[Jonatas Walker](https://github.com/jonataswalker) - For developing a [geocode extension](https://github.com/jonataswalker/ol3-geocoder) and a [custom menu control](https://github.com/jonataswalker/ol3-contextmenu) for Openlayers.
+[Matt Walker](https://github.com/walkermatt) - For developing a [layer control](https://github.com/walkermatt/ol3-layerswitcher) for Openlayers.
 
 ## How can I thank you?
 
