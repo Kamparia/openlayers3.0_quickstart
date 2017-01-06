@@ -12,7 +12,7 @@ function init(){
 					ratio: 1,
 					params: {},
 					url: 'https://sampleserver1.arcgisonline.com/ArcGIS/rest/services/' +
-					'Specialty/ESRI_StateCityHighway_USA/MapServer'
+					'Demographics/ESRI_Census_USA/MapServer'
 				})
 			})
 		]

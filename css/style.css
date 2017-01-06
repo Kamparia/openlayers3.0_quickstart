@@ -5,7 +5,8 @@ body {
 #map {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: auto;
+  top: 60px;
 }
 
 #map:focus {

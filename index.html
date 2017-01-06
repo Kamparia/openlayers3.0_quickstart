@@ -3,20 +3,42 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="robots" content="index, all" />  
-    <title>Getting Started with OpenLayers 3.0 by Somide Olaoye</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <title>Getting Started with OpenLayers 3.0</title>
+    <link rel="shortcut icon" href="./img/logo.png">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://openlayers.org/en/v3.20.1/css/ol.css" type="text/css">
     <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
     <link rel="stylesheet" type="text/css" href="./css/style.css">
   </head>
  
   <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="./" class="navbar-brand">Openlayers 3.0 Quickstart</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://github.com/Kamparia/openlayers3.0_quickstart">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-    <div id="map" class="map" tabindex="0"></div>
+    <div class="">
+        <div id="map" class="map" tabindex="0"></div>        
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
     <script src="https://openlayers.org/en/v3.20.1/build/ol.js"></script>    
+    <script src="./js/bootstrap.min.js"></script>
     <script src="./js/init.js"></script>
 
     <!-- GeoCoder Plugin -->
