@@ -1,6 +1,6 @@
 # Openlayers 3.0 Quickstart
 
-> #### A simple template for building responsive WebGIS applications usinf Openlayers 3.0 + Bootstrap
+A simple template for building responsive WebGIS applications usinf Openlayers 3.0 + Bootstrap
 
 <img width="1093" alt="screen shot 2016-07-02 at 2 12 14 pm" src="https://raw.githubusercontent.com/Kamparia/openlayers3.0_quickstart/master/img/screenshot.png">
 
@@ -19,8 +19,9 @@ Please feel free to fork this package and contribute by submitting a pull reques
 
 ## Tributes
 
-[Jonatas Walker](https://github.com/jonataswalker) - For developing a [geocode extension](https://github.com/jonataswalker/ol3-geocoder) and a [custom menu control](https://github.com/jonataswalker/ol3-contextmenu) for Openlayers.
-[Matt Walker](https://github.com/walkermatt) - For developing a [layer control](https://github.com/walkermatt/ol3-layerswitcher) for Openlayers.
+* [Jonatas Walker](https://github.com/jonataswalker) - For developing a [geocode extension](https://github.com/jonataswalker/ol3-geocoder) and a [custom menu control](https://github.com/jonataswalker/ol3-contextmenu) for Openlayers.
+
+* [Matt Walker](https://github.com/walkermatt) - For developing a [layer control](https://github.com/walkermatt/ol3-layerswitcher) for Openlayers.
 
 ## How can I thank you?
 
