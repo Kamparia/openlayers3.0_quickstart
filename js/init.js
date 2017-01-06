@@ -74,7 +74,7 @@ function init(){
 		//projection: 'EPSG:4326',
 		center: [-10997148, 4569099],
 		zoom: 4,
-		minZoom: 4,
+		minZoom: 3,
 		maxZoom: 20
 	});
 
