@@ -152,7 +152,6 @@ function init(){
 		});
 	};
 
-
 	var contextmenu = new ContextMenu({
 		width: 170,
 		defaultItems: false, // defaultItems are (for now) Zoom In/Zoom Out
